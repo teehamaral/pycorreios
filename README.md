@@ -5,15 +5,15 @@ Installation
 ------------
 If you have _setuptools_ you can use 
 
-    ```$ pip install git+https://github.com/teehamaral/pycorreios.git```
+    $ pip install git+https://github.com/teehamaral/pycorreios.git@feature/py3
 
 or
 
-    ```$ easy_install -U pycorreios```
+    $ easy_install -U pycorreios
 
 Otherwise, you can download the source from [GitHub][git] and run 
 
-    ```$ python setup.py install```
+    $ python setup.py install
 
 [git]: https://github.com/avelino/pycorreios "PyCorreios"
 
