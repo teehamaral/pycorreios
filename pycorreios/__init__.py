@@ -1,9 +1,7 @@
-import correios
-from correios import *
 
-# __all__ = (correios.__all__ + cod.__all__)
+from .correios import *
 
-__author__ = 'Thaigo Avelino'
+__author__ = 'Thaigo Avelino, Teeh Amaral'
 
 VERSION = (0, 1, 2)
 

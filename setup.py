@@ -22,7 +22,7 @@ def get_version(version_tuple):
 init = os.path.join(os.path.dirname(__file__), 'pycorreios', '__init__.py')
 version_line = filter(lambda l: l.startswith('VERSION'), open(init))[0]
 VERSION = get_version(eval(version_line.split('=')[-1]))
-print VERSION
+print(VERSION)
 
 CLASSIFIERS = [
     'Development Status :: 4 - Beta',
@@ -36,17 +36,18 @@ CLASSIFIERS = [
 setup(name='pycorreios',
       version=VERSION,
       packages=[
-          'test',
           'pycorreios',
       ],
-      author='Thiago Avelino',
-      author_email='thiagoavelinoster@gmail.com',
-      url='https://github.com/avelino/pycorreios/',
+      author='Teeh Amaral',
+      author_email='teehamaral1992@gmail.com',
+      url='https://github.com/teehamaral/pycorreios/',
       license='MIT',
       include_package_data=True,
       description=DESCRIPTION,
       long_description=LONG_DESCRIPTION,
       platforms=['any'],
       classifiers=CLASSIFIERS,
-      test_suite='test',
-      )
+      install_requires=[
+          'beautifulsoup4==4.6.0', 
+          'requests==2.18.4'
+      ])

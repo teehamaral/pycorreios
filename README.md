@@ -5,11 +5,15 @@ Installation
 ------------
 If you have _setuptools_ you can use 
 
-    $ easy_install -U pycorreios
+    ```$ pip install git+https://github.com/teehamaral/pycorreios.git```
+
+or
+
+    ```$ easy_install -U pycorreios```
 
 Otherwise, you can download the source from [GitHub][git] and run 
 
-    $ python setup.py install
+    ```$ python setup.py install```
 
 [git]: https://github.com/avelino/pycorreios "PyCorreios"
 
@@ -33,10 +37,10 @@ fields = {
           "diametro": "0"
           }
 
-test = Correios().frete(**fields)   # remember to call with **
+test = Correios().freight(**fields)   # remember to call with **
 
 # or with positional parameters - same result as above
-test = Correios().frete(Correios.SEDEX, '44001535', '03971010', 1, 1, 18, 9, 13.5, 0)
+test = Correios().freight(Correios.SEDEX, '44001535', '03971010', 1, 1, 18, 9, 13.5, 0)
 
 if test['Erro'] != '0':
     print 'Deu erro! :('
@@ -46,12 +50,12 @@ else:
     print "Valor: R$%s\nPrazo de Entrega: %s" % (test['Valor'],test['PrazoEntrega'])
 
 
-other_test = Correios().cep('03971010')
+other_test = Correios().zipcode('03971010')
 
 for tag_name in other_test.keys():
     print tag_name + ': ' + other_test[tag_name]
     
-other_test = Correios().encomenda('PJ382325976BR')
+other_test = Correios().order('PJ382325976BR')
 
 for tag_name in other_test.keys():
     print tag_name + ': ' + other_test[tag_name]

@@ -9,3 +9,4 @@ pycorreios.egg-info/
 env/
 .pypirc
 .idea
+.vscode/
